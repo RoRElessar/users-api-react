@@ -1,7 +1,7 @@
 class User < ApplicationRecord
   mount_uploader :image, UserImageUploader
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i.freeze
-  VALID_NAMES = /^[-a-z]+$/.freeze
+  VALID_NAMES = /^[a-zA-Z0-9]*$/.freeze
 
   validates :first_name, :last_name, :name, :region, :image, presence: true
   validates :first_name, :last_name, :name, format: { with: VALID_NAMES }
