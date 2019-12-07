@@ -7,6 +7,7 @@ class User < ApplicationRecord
   validates :first_name, :last_name, :name, format: { with: VALID_NAMES }
   validates :email, presence: true, format: { with: VALID_EMAIL_REGEX }
   validates :password, :password_confirmation, presence: true, length: { minimum: 10 }
+  validates :sex, inclusion: { in: %w[male female] }
   validate :password_match_validation
 
   protected
