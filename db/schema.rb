@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_12_06_190207) do
+ActiveRecord::Schema.define(version: 2019_12_07_114539) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -23,7 +23,7 @@ ActiveRecord::Schema.define(version: 2019_12_06_190207) do
     t.string "password"
     t.string "password_confirmation"
     t.string "region"
-    t.boolean "sex"
+    t.string "sex", default: "male"
     t.boolean "subscription"
     t.string "additional_information"
     t.string "image"
